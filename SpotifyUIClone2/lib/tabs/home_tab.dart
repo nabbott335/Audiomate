@@ -70,6 +70,8 @@ class HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
+
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
@@ -112,14 +114,14 @@ class HomeTabState extends State<HomeTab> {
                       artists: recentlyPlayed,
                       onPressed: widget.onPressed,
                     ),
-                    height: 185.0,
+                    height: 160.0,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text('Your Heavy Rotation',
+                        Text('Your Playlists',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,

@@ -134,7 +134,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 SizedBox(height: 20.0,),
                 Container(
-                  height: 40.0,
+                  height: 20.0,
                   color: Colors.transparent,
                   child: Container(
                     decoration: BoxDecoration(
