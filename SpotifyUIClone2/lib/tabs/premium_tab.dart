@@ -6,7 +6,7 @@ class PremiumTab extends StatelessWidget {
     return Container(
       color: Theme.of(context).accentColor,
       child: Center(
-        child: Text('Go Premium',
+        child: Text('Hi Nick',
             style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,

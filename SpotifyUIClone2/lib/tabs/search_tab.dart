@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SearchTab extends StatelessWidget {
-  final List<String> topGenres = ['Searches', 'Recently Listened', '', ''];
+  final List<String> topGenres = ['Search by Sound', 'Search by Title',
+    'Search by Artist', 'Search by Lyric'];
   final List<String> browseAll = [
 
   ];
@@ -74,7 +75,7 @@ class SearchTab extends StatelessWidget {
                                     EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
                                 child: Icon(Icons.search),
                               ),
-                              Text('Artists and Songs',
+                              Text('Artists, Songs, and Lyrics',
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 16.0,
@@ -102,7 +103,7 @@ class SearchTab extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(left: 8.0),
                           child: Text(
-                            'Misc.',
+                            'How would you like to search?',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,

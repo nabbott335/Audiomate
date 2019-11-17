@@ -185,10 +185,10 @@ class _HomePageState extends State<HomePage> {
                 isPlaying
                     ? Container()
                     : Positioned(
-                        bottom: 0,
+                        bottom: 20,
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width,
-                          height: 20,
+                          height: 0,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
@@ -309,10 +309,10 @@ class _HomePageState extends State<HomePage> {
                   icon: Icon(Icons.library_music),
                   title: Text('Library'),
                 ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.monetization_on),
-                  title: Text('Premium'),
-                ),
+                //BottomNavigationBarItem(
+                  //icon: Icon(Icons.monetization_on),
+                  //title: Text('Premium'),
+                //),
 
               ],
             ),
