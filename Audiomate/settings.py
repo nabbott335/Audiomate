@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+	'rest_framework',
+	'myapi.apps.MyapiConfig',
 	'playlist',
 	'songSearch',
     'django.contrib.admin',
