@@ -7,10 +7,9 @@ class HeroSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = Hero
 		fields = ('name', 'alias')
-		
+
 class PlaylistSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = Playlist
-		fields = ('playlistName', 'playlistOwner')
-		
-		
+		fields = ('playlistName', 'playlistOwner', 'playlistURL', 'playlistMosaic',
+			'playlistID')

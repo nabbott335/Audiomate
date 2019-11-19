@@ -7,7 +7,7 @@ from json.decoder import JSONDecodeError
 class Hero(models.Model):
 	name = models.CharField(max_length=60)
 	alias = models.CharField(max_length=60)
-	
+
 	def __str__(self):
 		return self.name
 
@@ -21,5 +21,12 @@ class Playlist(models.Model):
 	ATW = spotipy.Spotify(auth = token)
 	playlists = ATW.user_playlists("nabbott335")
 	#for i in playlists['items']:
-	playlistName = playlists['items'][0]['name']
-	playlistOwner = playlists['items'][0]['owner']['display_name']
+	currentplaylist = playlists['items'][0]
+	playlistName = currentplaylist['name']
+	playlistOwner = currentplaylist['owner']['display_name']
+	playlistMosaic = currentplaylist['images'][0]['url']
+	playlistURL = currentplaylist['external_urls']['spotify']
+	playlistTracks = currentplaylist['tracks']['href'][0]
+	playlistID = currentplaylist['id']
+	#playlistName = playlists['items'][0]['name']
+	#playlistOwner = playlists['items'][0]['owner']['display_name']
