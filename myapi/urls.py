@@ -6,6 +6,9 @@ router = routers.DefaultRouter()
 router.register(r'heroes', views.HeroViewSet)
 router.register(r'Playlist', views.PlaylistViewSet)
 
+
+
+
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
