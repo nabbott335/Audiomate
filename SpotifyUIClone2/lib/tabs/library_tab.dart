@@ -4,10 +4,51 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 
+/*void main() {
+  runApp(new MaterialApp(
+    home: new HomePage(),
+  ));
+}
 
+class HomePage extends StatefulWidget {
+  @override
+  HomePageState createState() => new HomePageState();
+}
+
+class HomePageState extends State<HomePage> {
+
+  List data;
+
+  Future<String> getData() async {
+    var response = await http.get(
+        Uri.encodeFull("http://10.0.2.2:8000/Playlist/"),
+        headers: {
+          "Accept": "application/json"
+        }
+    );
+    data = json.decode(response.body);
+    print(data[1]["title"]);
+
+    return "Success!";
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      body: new Center(
+        child: new RaisedButton(
+          child: new Text("Get data"),
+          onPressed: getData,
+        ),
+      ),
+    );
+  }
+}
+
+*/
 void main() {
   HttpClient()
-      .getUrl(Uri.parse('http://10.0.2.2:2243/Playlist/')) // produces a request object
+      .getUrl(Uri.parse('http://10.0.2.2:8000/Playlist/')) // produces a request object
       .then((request) => request.close()) // sends the request
       .then((response) =>
       response.transform(Utf8Decoder()).listen(print)); // transforms and prints the response
@@ -23,8 +64,15 @@ Future<Post> fetchPost() async {
   } else {
     // If that call was not successful, throw an error.
     throw Exception('Failed to load post');
+
+
+
+
   }
+
 }
+
+
 
 class Post {
   final int userId;
@@ -96,6 +144,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 
+
 class LibraryTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -136,9 +185,9 @@ class LibraryTab extends StatelessWidget {
           ),
           body: TabBarView(children: [
             Container(
-              child: SizedBox(
-                width: 100,
-                height: 100,
+              child: FlatButton(
+                  onPressed: main,
+                  padding: EdgeInsets.all(0.0),
                   child: Icon(
                 Icons.library_music,
                 color: Colors.white,
@@ -147,9 +196,9 @@ class LibraryTab extends StatelessWidget {
               color: Theme.of(context).accentColor,
             ),
             Container(
-              child: SizedBox(
-                width: 100,
-                height: 100,
+              child: FlatButton(
+                  onPressed: main,
+                  padding: EdgeInsets.all(0.0),
                   child: Icon(
                 Icons.person,
                 color: Colors.white,
@@ -158,17 +207,22 @@ class LibraryTab extends StatelessWidget {
               color: Theme.of(context).accentColor,
             ),
             Container(
-              child: SizedBox(
+              child: FlatButton(
+                  onPressed: main,
+                  padding: EdgeInsets.all(0.0),
+                  child: SizedBox(
                 width: 100,
                 height: 100,
                   child: Icon(
                 Icons.album,
+
                 color: Colors.white,
                 size: 75,
               )),
               color: Theme.of(context).accentColor,
             ),
-          ]),
-        ));
+          )],
+        )));
+
   }
 }

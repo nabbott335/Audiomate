@@ -72,7 +72,7 @@ class SearchTab extends StatelessWidget {
                             children: <Widget>[
                               Padding(
                                 padding:
-                                    EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                                EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
                                 child: Icon(Icons.search),
                               ),
                               Text('Artists, Songs, and Lyrics',
@@ -115,7 +115,7 @@ class SearchTab extends StatelessWidget {
                           physics: BouncingScrollPhysics(),
                           crossAxisCount: 2,
                           childAspectRatio:
-                              (MediaQuery.of(context).size.width / (2 * 100)),
+                          (MediaQuery.of(context).size.width / (2 * 100)),
                           children: List.generate(4, (index) {
                             return Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -125,18 +125,18 @@ class SearchTab extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(8),
                                       shape: BoxShape.rectangle,
                                       color: colors[index]
-                                      // gradient: new LinearGradient(
-                                      //   colors: [
-                                      //     Colors.blueAccent,
-                                      //     Colors.red,
-                                      //   ],
-                                      //   begin: FractionalOffset.topLeft,
-                                      //   end: FractionalOffset.bottomRight,
-                                      // ),
-                                      ),
+                                    // gradient: new LinearGradient(
+                                    //   colors: [
+                                    //     Colors.blueAccent,
+                                    //     Colors.red,
+                                    //   ],
+                                    //   begin: FractionalOffset.topLeft,
+                                    //   end: FractionalOffset.bottomRight,
+                                    // ),
+                                  ),
                                   child: Padding(
                                     padding:
-                                        const EdgeInsets.fromLTRB(16, 16, 0, 0),
+                                    const EdgeInsets.fromLTRB(16, 16, 0, 0),
                                     child: Text(
                                       topGenres[index],
                                       style: TextStyle(
@@ -163,7 +163,7 @@ class SearchTab extends StatelessWidget {
                           physics: BouncingScrollPhysics(),
                           crossAxisCount: 2,
                           childAspectRatio:
-                              (MediaQuery.of(context).size.width / (2 * 100)),
+                          (MediaQuery.of(context).size.width / (2 * 100)),
                           children: List.generate(browseAll.length, (index) {
                             return Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -173,18 +173,18 @@ class SearchTab extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(8),
                                       shape: BoxShape.rectangle,
                                       color: colors[index]
-                                      // gradient: new LinearGradient(
-                                      //   colors: [
-                                      //     Colors.blueAccent,
-                                      //     Colors.red,
-                                      //   ],
-                                      //   begin: FractionalOffset.topLeft,
-                                      //   end: FractionalOffset.bottomRight,
-                                      // ),
-                                      ),
+                                    // gradient: new LinearGradient(
+                                    //   colors: [
+                                    //     Colors.blueAccent,
+                                    //     Colors.red,
+                                    //   ],
+                                    //   begin: FractionalOffset.topLeft,
+                                    //   end: FractionalOffset.bottomRight,
+                                    // ),
+                                  ),
                                   child: Padding(
                                     padding:
-                                        const EdgeInsets.fromLTRB(16, 16, 0, 0),
+                                    const EdgeInsets.fromLTRB(16, 16, 0, 0),
                                     child: Text(
                                       browseAll[index],
                                       style: TextStyle(
