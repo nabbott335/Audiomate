@@ -17,7 +17,7 @@ robobrowser==0.5.3
 six==1.13.0
 soupsieve==1.9.5
 SpeechRecognition==3.8.1
-spotipy==2.4.4
+spotipy==2.22.1
 sqlparse==0.3.0
 tzlocal==2.0.0
 urllib3==1.25.6
